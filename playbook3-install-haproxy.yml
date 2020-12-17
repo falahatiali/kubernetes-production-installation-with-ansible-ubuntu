@@ -1,0 +1,8 @@
+- name: Install HAProxy
+  hosts: ha
+  become: true
+  gather_facts: true
+  vars:
+    my_file: /etc/haproxy/haproxy.cfg
+  roles:
+    - install-haproxy

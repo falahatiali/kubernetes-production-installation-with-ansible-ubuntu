@@ -1,0 +1,8 @@
+- name: Generate and copy hosts file
+  hosts: all
+  become: true
+  gather_facts: true
+  vars:
+    my_file: /etc/hosts
+  roles:
+    - generate-hosts-file

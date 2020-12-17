@@ -1,0 +1,34 @@
+---
+# tasks file for install-haproxy
+- name: Update packages
+  apt:
+    update_cache: true
+
+- name: Upgrade packages
+  apt:
+    upgrade: full
+    force_apt_get: yes
+
+- name: Install haproxy
+  apt:
+    name: haproxy
+    state: present
+
+- name: Enable haproxy
+  service:
+    name: haproxy
+    enabled: yes
+
+- name: Create haproxy /etc/haproxy/haproxy.cfg file
+  template:
+    src: haproxy.j2
+    dest: /etc/haproxy/haproxy.cfg
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Start service
+  service:
+    name: haproxy
+    state: started
+

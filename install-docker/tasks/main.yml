@@ -1,0 +1,71 @@
+---
+# tasks file for install-docker
+- name: Install required system packages
+  apt: name={{ item }} state=latest update_cache=yes
+  loop:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - software-properties-common
+    - python3-pip
+    - virtualenv
+    - python3-setuptools
+
+- name: Add Docker GPG apt Key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker Repository
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
+    state: present
+
+- name: Update and upgrade apt packages
+  become: true
+  apt:
+    upgrade: yes
+    update_cache: yes
+    cache_valid_time: 8640
+
+- name: Install Docker
+  apt:
+    name: "{{ packages_docker }}"
+    state: present
+    update_cache: yes
+  vars:
+    packages_docker:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+
+- name: Enable Docker Service
+  service:
+    name: docker
+    enabled: true
+
+- name: Start Docker Service
+  service:
+    name: docker
+    state: started
+
+- name: Ensure group "docker" exists with correct gid
+  group:
+    name: docker
+    state: present
+
+- name: Adding user ansible
+  user:
+    name: ansible
+    group: docker
+    shell: /bin/bash
+    append: yes
+
+- name: Reboot host and wait for it to restart
+  reboot:
+    msg: "Reboot initiated by Ansible"
+    connect_timeout: 5
+    reboot_timeout: 600
+    pre_reboot_delay: 0
+    post_reboot_delay: 30
+    test_command: whoami

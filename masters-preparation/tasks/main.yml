@@ -1,0 +1,10 @@
+---
+# tasks file for masters-preparation
+- name: Update packages
+  apt:
+    update_cache: true
+
+- name: Upgrade packages
+  apt:
+    upgrade: full
+    force_apt_get: yes

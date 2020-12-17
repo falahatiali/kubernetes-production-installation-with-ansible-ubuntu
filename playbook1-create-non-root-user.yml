@@ -1,0 +1,8 @@
+- name: Install Kubernetes
+  hosts: all
+  become: true
+  any_errors_fatal: true
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
+    - first-add-non-root-user

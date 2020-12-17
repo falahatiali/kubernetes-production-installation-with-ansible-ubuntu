@@ -1,0 +1,5 @@
+- name: Install prerequisites for master nodes
+  hosts: masters
+  gather_facts: true
+  roles:
+    - master-preparation

@@ -1,0 +1,7 @@
+- name: Install prerequisites for master nodes
+  hosts: masters,workers
+  gather_facts: true
+  any_errors_fatal: true
+  become: yes
+  roles:
+    - install-docker

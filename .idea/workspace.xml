@@ -22,6 +22,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -30,11 +35,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608224202662</updated>
-      <workItem from="1608224203737" duration="3028000" />
+      <workItem from="1608224203737" duration="12698000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="329" y="27" width="770" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608230157478">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="329" y="27" width="770" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1294.741@72.27.1294.741" timestamp="1608230157478" />
+    <state x="694" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1608234639078">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="694" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1608234639078" />
   </component>
 </project>

@@ -7,6 +7,9 @@ s-master2
 s-master1
 s-ha
 
+[leader]
+s-master1
+
 [masters]
 s-master3
 s-master2

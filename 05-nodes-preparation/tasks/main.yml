@@ -1,0 +1,68 @@
+---
+# tasks file for 05-nodes-preparation
+- name: Update packages
+  apt:
+    update_cache: true
+
+- name: Upgrade packages
+  apt:
+    upgrade: full
+    force_apt_get: yes
+
+- name: Letting iptables see bridged traffic
+  copy:
+    src: files/iptables-see-bridge.conf
+    dest: /etc/sysctl.d/k8s.conf
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Reload sysctl config for iptables
+  command: sysctl --system
+
+- name: Disable SWAP
+  command: swapoff -a
+
+- name: Reload sysctl config for iptables
+  command: sysctl --system
+
+- name: Add Google official GPG key
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Add Kubernetes Repository
+  apt_repository:
+    repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+    filename: kubernetes
+    mode: 0600
+
+- name: Update packages
+  apt:
+    update_cache: true
+
+- name: Upgrade packages
+  apt:
+    upgrade: full
+    force_apt_get: yes
+
+- name: Installing Kubernetes Cluster Packages.
+  apt:
+    name:
+      - kubeadm
+      - kubectl
+      - kubelet
+    state: present
+
+- name: Enable service kubelet, and enable persistently
+  service:
+    name: kubelet
+    enabled: yes
+
+- name: Reboot all the kubernetes nodes.
+  reboot:
+    post_reboot_delay: 10
+    reboot_timeout: 40
+    connect_timeout: 60
+    test_command: uptime

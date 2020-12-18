@@ -5,4 +5,4 @@
   vars:
     my_file: /etc/hosts
   roles:
-    - generate-hosts-file
+    - 02-generate-hosts-file

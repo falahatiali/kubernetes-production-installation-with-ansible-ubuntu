@@ -1,0 +1,5 @@
+pod_network_cidr: "192.168.164.0/24"
+k8s_master_ip: "37.152.180.172"
+pod_network_manifest_file: "https://docs.projectcalico.org/v3.17/manifests/calico.yaml"
+rbac_manifest_file: ""
+ansible_user: "ansible"

@@ -5,4 +5,4 @@
   vars:
     my_file: /etc/haproxy/haproxy.cfg
   roles:
-    - install-haproxy
+    - 03-install-haproxy

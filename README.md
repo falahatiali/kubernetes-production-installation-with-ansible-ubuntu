@@ -38,6 +38,10 @@ Copy your ssh public key in your machines with following command
 
 now you can execute all playbooks in order
 
+And for config master nodes edit following file:
+**_ master-nodes/vars/main.yml _** - and put your arbitrary configs
+change k8s_master_ip for lead master machine
+
 ```
 1 - ansible-playbook -i inventory playbook1-create-non-root-user.yml
 2 - ansible-playbook -i inventory playbook2-generate-hosts-file.yml

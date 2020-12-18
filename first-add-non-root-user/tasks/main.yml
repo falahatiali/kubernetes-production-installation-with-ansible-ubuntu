@@ -18,3 +18,14 @@
   authorized_key: user=ansible key="{{item}}"
   with_file:
     - /home/ansible/.ssh/id_rsa.pub
+
+# For countries who are under sanctions
+- name: Add Shecan and Begzar nameserver for download packages
+  blockinfile:
+    path: /etc/netplan/50-cloud-init.yaml
+    block: |2
+                  nameservers:
+                    addresses: [185.51.200.2 , 178.22.122.100,185.55.226.26 , 185.55.225.25 , 8.8.8.8]
+
+- name: Apply Netplas Settings
+  shell: netplan apply

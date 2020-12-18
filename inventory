@@ -1,24 +1,24 @@
 [all]
-s-worker3
-s-worker2
-s-worker1
-s-master3
-s-master2
-s-master1
-s-ha
+ss-worker3
+ss-worker2
+ss-worker1
+ss-master3
+ss-master2
+ss-master1
+ss-ha
 
 [leader]
-s-master1
+ss-master1
 
 [masters]
-s-master3
-s-master2
-s-master1
+ss-master3
+ss-master2
+ss-master1
 
 [workers]
-s-worker3
-s-worker2
-s-worker1
+ss-worker3
+ss-worker2
+ss-worker1
 
 [ha]
-s-ha
+ss-ha

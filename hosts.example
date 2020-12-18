@@ -1,0 +1,7 @@
+192.168.1.12 ss-worker3
+192.168.1.13 ss-worker2
+192.168.1.14 ss-worker1
+192.168.1.15 ss-master3
+192.168.1.16 ss-master2
+192.168.1.17 ss-master1
+192.168.1.18 ss-ha

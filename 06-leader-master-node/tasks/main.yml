@@ -2,55 +2,55 @@
 # CREATED BY ALI FALAHATI
 # tasks file for 06-leader-master-node
 
-#- name: Intilizing Kubernetes Cluster
-#  command: kubeadm init --pod-network-cidr "{{ pod_network_cidr }}" --apiserver-advertise-address "{{ k8s_master_ip }}"
-#  run_once: true
-#  any_errors_fatal: true
-#  delegate_to: "{{ k8s_master_ip }}"
-#
-#- pause: seconds=30
-#
-#- name: Create directory for kube config.
-#  become_user: ansible
-#  become_method: sudo
-#  any_errors_fatal: true
-#  become: yes
-#  file:
-#    path: /home/{{ansible_user}}/.kube
-#    state: directory
-#    owner: "{{ ansible_user }}"
-#    group: docker
-#    mode: 0755
-#
-#- name: Copy /etc/kubernetes/admin.conf to user home directory /home/{{ ansible_user }}/.kube/config.
-#  become_user: root
-#  become_method: sudo
-#  become: yes
-#  copy:
-#    src: /etc/kubernetes/admin.conf
-#    dest: /home/{{ ansible_user }}/.kube/config
-#    remote_src: yes
-#    owner: "{{ ansible_user }}"
-#    group: docker
-#    mode: '0644'
-#
-#- pause: seconds=10
-#
-#- name: Remove the cache directory.
-#  become_user: ansible
-#  become_method: sudo
-#  become: yes
-#  file:
-#    path: /home/{{ ansible_user }}/.kube/cache
-#    state: absent
-#
-#- name: Create Pod Network & RBAC.
-#  become_user: ansible
-#  become_method: sudo
-#  become: yes
-#  command: "{{ item }}"
-#  with_items:
-#    - kubectl apply -f {{ pod_network_manifest_file }}
+- name: Intilizing Kubernetes Cluster
+  command: kubeadm init --pod-network-cidr "{{ pod_network_cidr }}" --apiserver-advertise-address "{{ k8s_master_ip }}"
+  run_once: true
+  any_errors_fatal: true
+  delegate_to: "{{ k8s_master_ip }}"
+
+- pause: seconds=30
+
+- name: Create directory for kube config.
+  become_user: ansible
+  become_method: sudo
+  any_errors_fatal: true
+  become: yes
+  file:
+    path: /home/{{ansible_user}}/.kube
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: docker
+    mode: 0755
+
+- name: Copy /etc/kubernetes/admin.conf to user home directory /home/{{ ansible_user }}/.kube/config.
+  become_user: root
+  become_method: sudo
+  become: yes
+  copy:
+    src: /etc/kubernetes/admin.conf
+    dest: /home/{{ ansible_user }}/.kube/config
+    remote_src: yes
+    owner: "{{ ansible_user }}"
+    group: docker
+    mode: '0644'
+
+- pause: seconds=10
+
+- name: Remove the cache directory.
+  become_user: ansible
+  become_method: sudo
+  become: yes
+  file:
+    path: /home/{{ ansible_user }}/.kube/cache
+    state: absent
+
+- name: Create Pod Network & RBAC.
+  become_user: ansible
+  become_method: sudo
+  become: yes
+  command: "{{ item }}"
+  with_items:
+    - kubectl apply -f {{ pod_network_manifest_file }}
 
 - name: get token
   shell: kubeadm token create  --print-join-command
@@ -63,4 +63,4 @@
   local_action: copy content="{{ kubernetes_join_command.stdout_lines[0] }}" dest="{{ role_path }}/files/join-command" mode=0777
 
 - name: Create token and copy it on /tmp path for next role
-  local_action: copy content="{{ kubernetes_join_command.stdout_lines[0] }}" dest="/tmp/join-command" mode=0777
+  local_action: copy content="{{ kubernetes_join_command.stdout_lines[0] }}" dest="/tmp/join-command.sh" mode=0777

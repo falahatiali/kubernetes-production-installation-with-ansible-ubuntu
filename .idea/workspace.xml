@@ -20,69 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e338a505-76a2-49dd-a910-9fad1660aa4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/06-leader-master-node/files/join-command" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-leader-master-node/handlers/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-join-master-nodes/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-join-master-nodes/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-join-master-nodes/defaults/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-join-master-nodes/files/join-command" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-join-master-nodes/handlers/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-join-master-nodes/meta/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-join-master-nodes/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playbook7-join-master-nodes.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-join-master-nodes/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-join-master-nodes/files/kubernetes_join_command" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-add-non-root-user/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/01-first-add-non-root-user/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-add-non-root-user/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/01-first-add-non-root-user/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-add-non-root-user/defaults/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/01-first-add-non-root-user/defaults/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-add-non-root-user/handlers/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/01-first-add-non-root-user/handlers/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-add-non-root-user/meta/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/01-first-add-non-root-user/meta/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-add-non-root-user/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/01-first-add-non-root-user/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-add-non-root-user/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/01-first-add-non-root-user/vars/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate-hosts-file/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/02-generate-hosts-file/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate-hosts-file/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/02-generate-hosts-file/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate-hosts-file/defaults/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/02-generate-hosts-file/defaults/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate-hosts-file/handlers/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/02-generate-hosts-file/handlers/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate-hosts-file/meta/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/02-generate-hosts-file/meta/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate-hosts-file/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/02-generate-hosts-file/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate-hosts-file/templates/hosts.j2" beforeDir="false" afterPath="$PROJECT_DIR$/02-generate-hosts-file/templates/hosts.j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate-hosts-file/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/02-generate-hosts-file/vars/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-docker/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-docker/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-docker/defaults/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/04-install-docker/defaults/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-docker/handlers/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/04-install-docker/handlers/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-docker/meta/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/meta/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-docker/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/04-install-docker/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-docker/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/04-install-docker/vars/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-haproxy/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/04-install-docker/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-haproxy/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/04-install-docker/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-haproxy/defaults/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/defaults/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-haproxy/handlers/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/handlers/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-haproxy/meta/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/04-install-docker/meta/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-haproxy/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-haproxy/templates/haproxy.j2" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/templates/haproxy.j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install-haproxy/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/vars/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory" beforeDir="false" afterPath="$PROJECT_DIR$/inventory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master-nodes/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/05-nodes-preparation/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master-nodes/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/05-nodes-preparation/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master-nodes/handlers/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master-nodes/meta/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/05-nodes-preparation/meta/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master-nodes/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master-nodes/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes-preparation/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes-preparation/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes-preparation/defaults/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/05-nodes-preparation/defaults/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes-preparation/files/iptables-see-bridge.conf" beforeDir="false" afterPath="$PROJECT_DIR$/05-nodes-preparation/files/iptables-see-bridge.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes-preparation/handlers/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/05-nodes-preparation/handlers/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes-preparation/meta/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/meta/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes-preparation/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/05-nodes-preparation/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes-preparation/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/05-nodes-preparation/vars/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playbook1-create-non-root-user.yml" beforeDir="false" afterPath="$PROJECT_DIR$/playbook1-create-non-root-user.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playbook2-generate-hosts-file.yml" beforeDir="false" afterPath="$PROJECT_DIR$/playbook2-generate-hosts-file.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playbook3-install-haproxy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/playbook3-install-haproxy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playbook4-install-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/playbook4-install-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playbook5-nodes-preparations.yml" beforeDir="false" afterPath="$PROJECT_DIR$/playbook5-nodes-preparations.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playbook6-master-nodes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/playbook6-master-leader-node.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-leader-master-node/files/join-command" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/files/join-command" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-join-master-nodes/files/join-command" beforeDir="false" afterPath="$PROJECT_DIR$/07-join-master-nodes/files/join-command.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-join-master-nodes/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/07-join-master-nodes/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbook7-join-master-nodes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/playbook7-join-master-nodes.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +71,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608224202662</updated>
       <workItem from="1608224203737" duration="12899000" />
-      <workItem from="1608282204528" duration="30583000" />
+      <workItem from="1608282204528" duration="32981000" />
+      <workItem from="1608378382014" duration="7171000" />
     </task>
     <servers />
   </component>
@@ -142,6 +89,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

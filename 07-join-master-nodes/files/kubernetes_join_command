@@ -1,0 +1,1 @@
+kubeadm join 5.253.24.106:6443 --token aj4um0.vzl094e9smw607hi     --discovery-token-ca-cert-hash sha256:b89f5e10c0e46bd5931ffdf25cf93b22303ed323662b1b9fe936b387bb103a2f 

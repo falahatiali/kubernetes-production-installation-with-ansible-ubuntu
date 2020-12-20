@@ -1,0 +1,31 @@
+---
+# tasks file for 01-first-add-non-root-user
+- name: Create the ansible user
+  user:
+    name: ansible
+    append: yes
+    state: present
+    create_home: yes
+    shell: /bin/bash
+
+- name: Allow ansible to have passwordless sudo
+  lineinfile:
+    dest: /etc/sudoers
+    line: 'ansible ALL=(ALL) NOPASSWD: ALL'
+    validate: 'visudo -cf %s'
+
+- name: Setup authorized keys for ansible user
+  authorized_key: user=ansible key="{{item}}"
+  with_file:
+    - /home/ansible/.ssh/id_rsa.pub
+
+# For countries who are under sanctions
+- name: Add Shecan and Begzar nameserver for download packages
+  blockinfile:
+    path: /etc/netplan/50-cloud-init.yaml
+    block: |2
+                  nameservers:
+                    addresses: [185.51.200.2 , 178.22.122.100,185.55.226.26 , 185.55.225.25 , 8.8.8.8]
+
+- name: Apply Netplas Settings
+  shell: netplan apply

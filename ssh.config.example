@@ -1,0 +1,44 @@
+Host ss-ha
+    HostName 192.168.1.12
+    User ubuntu
+    Port 22
+    ServerAliveInterval 140
+
+Host ss-master1
+     HostName 192.168.1.13
+     User ubuntu
+     Port 22
+     ServerAliveInterval 120
+
+Host ss-master2
+     HostName 192.168.1.14
+     User ubuntu
+     Port 22
+     ServerAliveInterval 120
+
+
+Host ss-master3
+     HostName 192.168.1.15
+     User ubuntu
+     Port 22
+     ServerAliveInterval 120
+
+
+Host ss-worker1
+     HostName 192.168.1.16
+     User ubuntu
+     Port 22
+     ServerAliveInterval 120
+
+Host ss-worker2
+     HostName 192.168.1.17
+     User ubuntu
+     Port 22
+     ServerAliveInterval 120
+
+
+Host ss-worker3
+     HostName 192.168.1.18
+     User ubuntu
+     Port 22
+     ServerAliveInterval 120

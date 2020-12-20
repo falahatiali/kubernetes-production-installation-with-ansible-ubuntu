@@ -1,41 +1,36 @@
 ---
 # tasks file for 07-join-master-nodes
-#- name: Generated token - 1.
-#  local_action: shell sed -n 73,75p ./token > ./mastertoken
-#
-#- name: Copy master token
-#  copy:
-#    src: /opt/k8s/mastertoken
-#    dest: /tmp/join-command.sh
-#    owner: root
-#    group: root
-#    mode: '0777'
-#- name: Generated token - 2.
-#  shell: sed -i 's/\b:80\b/& --apiserver-advertise-address {{ansible_eth1.ipv4.address}} /' /tmp/join-command.sh
-#- name: Add new Kubernetes master member
-#  command: sh /tmp/join-command.sh
+#- name: test "{{ansible_eth0.ipv4.address}}"
 
-- name: Add new Kubernetes master member
-  become: yes
-  become_method: sudo
-  local_action: copy src="/tmp/join-command.sh" dest="{{ role_path }}/files/kubernetes_join_command" mode=0777
-#  shell: sh /tmp/join-command.sh
+- name: copy files in servers
+  copy:
+    src: /tmp/join-command.sh
+    dest: /tmp/join.sh
+    owner: ansible
+    group: docker
+    mode: "0777"
+
+- name: copy cert in servers
+  copy:
+    src: /tmp/cert-key
+    dest: /tmp/cert-key
+    owner: ansible
+    group: docker
+    mode: "0777"
+
+#- shell: pwd
+#  register: shellout
+#- debug: var=shellout.stdout
+#- shell: pwd
+#  args:
+#    chdir: "{{role_path}}"
+#  register: shellout2
+#- debug: var=shellout2.stdout
 
 - name: Join the master nodes
-#  become: yes
-#  become_method: sudo
-#  become_user: root
-  command: sh /tmp/join-command.sh
+  become: yes
+  remote_user: ansible
+  command: sh /tmp/join.sh --control-plane --certificate-key /tmp/cert-key > /tmp/master-node-add-result
   register: joined_or_not
 
-#- name: Get the token for joining the nodes with Kuberentes master.
-#  shell: kubeadm token create --print-join-command
-#  register: kubernetes_join_command
-#
-#- debug:
-#    msg: "{{ kubernetes_join_command.stdout }}"
-#
-#- name: Copy join command to local file.
-#  become: false
-#  any_errors_fatal: true
-#  local_action: copy content="{{ kubernetes_join_command.stdout_lines[0] }}" dest="/tmp/kubernetes_join_command" mode=0777
+- debug: var=joined_or_not.stdout

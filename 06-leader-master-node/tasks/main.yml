@@ -2,6 +2,8 @@
 # CREATED BY ALI FALAHATI
 # tasks file for 06-leader-master-node
 
+#TODO
+
 - name: Intilizing Kubernetes Cluster
   command: kubeadm init --pod-network-cidr "{{ pod_network_cidr }}" --apiserver-advertise-address "{{ k8s_master_ip }}"
   run_once: true
@@ -51,16 +53,22 @@
   command: "{{ item }}"
   with_items:
     - kubectl apply -f {{ pod_network_manifest_file }}
+#
 
 - name: get token
-  shell: kubeadm token create  --print-join-command
+  shell: kubeadm token create --print-join-command
   register: kubernetes_join_command
+
+- name: get certificate key
+  shell: kubeadm certs certificate-key
+  register: cert_key
 
 - debug:
     msg: "{{ kubernetes_join_command.stdout_lines[0]  }}"
 
-- name: Create token and put in file
-  local_action: copy content="{{ kubernetes_join_command.stdout_lines[0] }}" dest="{{ role_path }}/files/join-command" mode=0777
-
 - name: Create token and copy it on /tmp path for next role
   local_action: copy content="{{ kubernetes_join_command.stdout_lines[0] }}" dest="/tmp/join-command.sh" mode=0777
+
+- name: Create token and copy it on /tmp path for next role
+  local_action: copy content="{{ cert_key.stdout_lines[0] }}" dest="/tmp/cert-key" mode=0777
+

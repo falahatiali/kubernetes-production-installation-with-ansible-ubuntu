@@ -20,22 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e338a505-76a2-49dd-a910-9fad1660aa4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/08-join-worker-nodes/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08-join-worker-nodes/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08-join-worker-nodes/defaults/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08-join-worker-nodes/handlers/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08-join-worker-nodes/meta/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08-join-worker-nodes/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08-join-worker-nodes/tests/inventory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08-join-worker-nodes/tests/test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08-join-worker-nodes/vars/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playbook8-join-worker-nodes.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-first-add-non-root-user/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/01-first-add-non-root-user/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-leader-master-node/files/join-command" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/files/join-command" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-join-master-nodes/files/kubernetes_join_command" beforeDir="false" afterPath="$PROJECT_DIR$/07-join-master-nodes/files/kubernetes_join_command" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-join-master-nodes/files/join-command.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-join-master-nodes/files/kubernetes_join_command" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/07-join-master-nodes/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/07-join-master-nodes/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/08-join-worker-nodes/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/08-join-worker-nodes/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory" beforeDir="false" afterPath="$PROJECT_DIR$/inventory" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +50,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -81,6 +73,8 @@
       <workItem from="1608282204528" duration="32981000" />
       <workItem from="1608378382014" duration="7448000" />
       <workItem from="1608457052813" duration="377000" />
+      <workItem from="1608735241656" duration="7455000" />
+      <workItem from="1608797931239" duration="6150000" />
     </task>
     <servers />
   </component>
@@ -101,23 +95,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="399" y="199" width="630" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608319841727">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="399" y="199" width="630" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1294.741@72.27.1294.741" timestamp="1608319841727" />
-    <state x="463" y="81" width="501" height="640" key="RollbackChangesDialog" timestamp="1608469699764">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="463" y="81" width="501" height="640" key="RollbackChangesDialog/72.27.1294.741@72.27.1294.741" timestamp="1608469699764" />
-    <state x="329" y="27" width="770" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608473023394">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="329" y="27" width="770" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1294.741@72.27.1294.741" timestamp="1608473023394" />
-    <state x="694" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1608234639078">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="694" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1608234639078" />
   </component>
 </project>

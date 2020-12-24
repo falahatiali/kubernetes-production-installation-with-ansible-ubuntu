@@ -1,5 +1,4 @@
 [all]
-ss-worker3
 ss-worker2
 ss-worker1
 ss-master3
@@ -20,7 +19,6 @@ ss-master2
 ss-master1
 
 [workers]
-ss-worker3
 ss-worker2
 ss-worker1
 

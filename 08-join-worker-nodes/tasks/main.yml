@@ -1,2 +1,25 @@
 ---
 # tasks file for 08-join-worker-nodes
+- name: copy files in servers
+  copy:
+    src: /tmp/join-command.sh
+    dest: /tmp/join.sh
+    owner: ansible
+    group: docker
+    mode: "0777"
+
+- name: copy cert in servers
+  copy:
+    src: /tmp/cert-key
+    dest: /tmp/cert-key
+    owner: ansible
+    group: docker
+    mode: "0777"
+
+- name: Join the master nodes
+  become: yes
+  remote_user: ansible
+  command: sh -x /tmp/join.sh > /tmp/master-node-add-result
+  register: joined_or_not
+
+- debug: var=joined_or_not.stdout

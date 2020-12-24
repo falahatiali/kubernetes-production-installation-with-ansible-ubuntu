@@ -30,7 +30,7 @@
 - name: Join the master nodes
   become: yes
   remote_user: ansible
-  command: sh /tmp/join.sh --control-plane --certificate-key /tmp/cert-key > /tmp/master-node-add-result
+  command: sh -x /tmp/join.sh --control-plane --certificate-key /tmp/cert-key > /tmp/master-node-add-result
   register: joined_or_not
 
 - debug: var=joined_or_not.stdout

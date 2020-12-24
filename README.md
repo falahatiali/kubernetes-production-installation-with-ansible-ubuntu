@@ -50,6 +50,3 @@ change k8s_master_ip for lead master machine
 5 - ansible-playbook -i inventory playbook5-nodes-preparations.yml
 6 - ansible-playbook -i inventory playbook6-master-nodes.yml
 ```
- 
-##Installation
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.

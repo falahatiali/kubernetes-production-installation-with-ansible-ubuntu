@@ -1,1 +1,0 @@
-kubeadm join 193.176.240.163:6443 --token atiguj.mfl3s9tuxnd4xjj9     --discovery-token-ca-cert-hash sha256:6de19480d9b40ea30dfd43c281915697842c4bd34b8b677a8deb3b635b39f915 

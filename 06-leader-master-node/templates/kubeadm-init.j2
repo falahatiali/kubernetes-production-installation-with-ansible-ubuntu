@@ -1,0 +1,52 @@
+apiVersion: kubeadm.k8s.io/v1beta2
+kind: ClusterConfiguration
+kubernetesVersion: 1.20.0
+dns:
+  type: CoreDNS
+etcd:
+  local:
+    serverCertSANs:
+{% for master in masters %}
+    - {{ master }}
+    - {{ masters[master] }}
+{% endfor %}
+
+    peerCertSANs:
+{% for master in masters %}
+    - {{ master }}
+    - {{ masters[master] }}
+{% endfor %}
+
+networking:
+  # This CIDR is a Calico default. Substitute or remove for your CNI provider.
+  # serviceSubnet: "10.96.0.0/12"
+  # podSubnet: "192.168.0.0/16"
+  dnsDomain: "cluster.local"
+apiServer:
+  certSANs:
+{% for master in masters %}
+  - {{ masters[master] }}
+{% endfor %}
+  - verzav.ir
+  - api.verzav.ir
+  - cluster.local
+controlPlaneEndpoint: "{{ ha }}:8443"
+certificatesDir: "/etc/kubernetes/pki"
+imageRepository: "k8s.gcr.io"
+useHyperKubeImage: false
+clusterName: "cluster.local"
+---
+apiVersion: kubeadm.k8s.io/v1beta2
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: {{ masters['ss-master1']}}
+  bindPort: 6443
+nodeRegistration:
+  kubeletExtraArgs:
+    node-ip: {{ masters['ss-master1'] }}
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+# This CIDR is a Calico default. Substitute or remove for your CNI provider.
+# clusterCIDR: "192.168.0.0/16"
+mode: "ipvs"

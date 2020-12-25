@@ -32,3 +32,7 @@
     name: haproxy
     state: started
 
+- name: Restart service
+  service:
+    name: haproxy
+    state: restarted

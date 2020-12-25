@@ -2,35 +2,34 @@
 # tasks file for 07-join-master-nodes
 #- name: test "{{ansible_eth0.ipv4.address}}"
 
-- name: copy files in servers
-  copy:
-    src: /tmp/join-command.sh
-    dest: /tmp/join.sh
+#- name: copy files in servers
+#  copy:
+#    src: /tmp/join-command.sh
+#    dest: /tmp/join.sh
+#    owner: ansible
+#    group: docker
+#    mode: "0777"
+#
+#- name: copy cert in servers
+#  copy:
+#    src: /tmp/cert-key
+#    dest: /tmp/cert-key
+#    owner: ansible
+#    group: docker
+#    mode: "0777"
+#
+#- name: Join the master nodes
+#  become: yes
+#  remote_user: ansible
+#  command: sh -x /tmp/join.sh --control-plane --certificate-key /tmp/cert-key > /tmp/master-node-add-result
+#  register: joined_or_not
+#
+#- debug: var=joined_or_not.stdout
+
+- name: Copy kube-join file for joining nodes
+  template:
+    src: join-masters.j2
+    dest: /home/ansible/kubeadm-join.yml
     owner: ansible
     group: docker
-    mode: "0777"
-
-- name: copy cert in servers
-  copy:
-    src: /tmp/cert-key
-    dest: /tmp/cert-key
-    owner: ansible
-    group: docker
-    mode: "0777"
-
-#- shell: pwd
-#  register: shellout
-#- debug: var=shellout.stdout
-#- shell: pwd
-#  args:
-#    chdir: "{{role_path}}"
-#  register: shellout2
-#- debug: var=shellout2.stdout
-
-- name: Join the master nodes
-  become: yes
-  remote_user: ansible
-  command: sh -x /tmp/join.sh --control-plane --certificate-key /tmp/cert-key > /tmp/master-node-add-result
-  register: joined_or_not
-
-- debug: var=joined_or_not.stdout
+    mode: u=rwx,g=rwx,o=r

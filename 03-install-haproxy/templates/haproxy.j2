@@ -49,25 +49,24 @@ defaults
     timeout check           10s
     maxconn                 3000
 
-#---------------------------------------------------------------------
-# main frontend which proxys to the backends
-#---------------------------------------------------------------------
-frontend k8s-api
-   bind 0.0.0.0:80
-   mode tcp
-   option tcplog
-   default_backend k8s-api
+listen stats
+    bind *:8080
+    stats enable
+    stats hide-version
+    stats show-legends
+    stats refresh 5s
+    stats realm Haproxy\ Statistics
+    stats uri /stats
+    stats auth admin:123
 
-#---------------------------------------------------------------------
-# round robin balancing between the various backends
-#---------------------------------------------------------------------
-backend k8s-api
-   mode tcp
-   option tcplog
-   option tcp-check
-   balance roundrobin
-   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
+frontend k8s-apiserver
+    mode tcp
+    option tcplog
+    bind :8443
+    use_backend masters
 
-       server s-master1  193.176.241.172:6443 check
-       server s-master2  193.176.240.105:6443 check
-       server s-master3  193.176.241.245:6443 check
+backend masters
+    mode tcp
+    server master1 ss-master1:6443 check
+    server master2 ss-master2:6443 check
+    server master3 ss-master3:6443 check

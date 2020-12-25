@@ -20,13 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e338a505-76a2-49dd-a910-9fad1660aa4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/06-leader-master-node/templates/kubeadm-init.j2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-join-master-nodes/templates/join-masters.j2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-generate-hosts-file/defaults/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-generate-hosts-file/handlers/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-generate-hosts-file/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-install-haproxy/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-install-haproxy/templates/haproxy.j2" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/templates/haproxy.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-join-master-nodes/files/join-command.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-join-master-nodes/files/kubernetes_join_command" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/07-join-master-nodes/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/07-join-master-nodes/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08-join-worker-nodes/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/08-join-worker-nodes/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory" beforeDir="false" afterPath="$PROJECT_DIR$/inventory" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +58,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/07-join-master-nodes/templates" />
+      <recent name="$PROJECT_DIR$/06-leader-master-node/templates" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -74,12 +83,20 @@
       <workItem from="1608378382014" duration="7448000" />
       <workItem from="1608457052813" duration="377000" />
       <workItem from="1608735241656" duration="7455000" />
-      <workItem from="1608797931239" duration="6150000" />
+      <workItem from="1608797931239" duration="13177000" />
+      <workItem from="1608887983614" duration="7617000" />
+      <workItem from="1608915880825" duration="4532000" />
+      <workItem from="1608921961253" duration="153000" />
+      <workItem from="1608922130889" duration="6104000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.j2" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="main.yml" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

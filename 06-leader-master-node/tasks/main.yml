@@ -2,7 +2,7 @@
 # CREATED BY ALI FALAHATI
 # tasks file for 06-leader-master-node
 
-- name: test
+- name: Copy config file to server
   template:
     src: kubeadm-init.j2
     dest: /home/ansible/kubeadm-init.yml
@@ -11,7 +11,7 @@
     mode: u=rwx,g=rwx,o=r
 
 - name: Intilizing Kubernetes Cluster
-  command: kubeadm init --config /home/ansible/kubeadm-init.yml --upload-certs
+  shell: kubeadm init --config /home/ansible/kubeadm-init.yml ;kubeadm init phase upload-certs --upload-certs
   run_once: true
   any_errors_fatal: true
   delegate_to: "{{ k8s_master_ip }}"

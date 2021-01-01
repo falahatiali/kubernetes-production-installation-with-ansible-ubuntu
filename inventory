@@ -10,8 +10,8 @@ ss-ha
 ss-master1
 
 [members]
-ss-master3
 ss-master2
+ss-master3
 
 [masters]
 ss-master3

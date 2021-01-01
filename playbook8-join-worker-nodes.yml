@@ -1,5 +1,6 @@
 - name: Join Worker Nodes to cluster
   hosts: workers
+  serial: 1
   gather_facts: true
   any_errors_fatal: true
   remote_user: ansible

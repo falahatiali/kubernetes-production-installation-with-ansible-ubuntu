@@ -2,34 +2,31 @@
 # tasks file for 07-join-master-nodes
 #- name: test "{{ansible_eth0.ipv4.address}}"
 
-#- name: copy files in servers
-#  copy:
-#    src: /tmp/join-command.sh
-#    dest: /tmp/join.sh
-#    owner: ansible
-#    group: docker
-#    mode: "0777"
-#
-#- name: copy cert in servers
-#  copy:
-#    src: /tmp/cert-key
-#    dest: /tmp/cert-key
-#    owner: ansible
-#    group: docker
-#    mode: "0777"
-#
-#- name: Join the master nodes
-#  become: yes
-#  remote_user: ansible
-#  command: sh -x /tmp/join.sh --control-plane --certificate-key /tmp/cert-key > /tmp/master-node-add-result
-#  register: joined_or_not
-#
-#- debug: var=joined_or_not.stdout
+- name: copy kubeadm command in servers
+  copy:
+   src: /tmp/kubeadmin-init
+   dest: /tmp/kubeadmin-init.sh
+   owner: ansible
+   group: docker
+   mode: "0777"
 
-- name: Copy kube-join file for joining nodes
-  template:
-    src: join-masters.j2
-    dest: /home/ansible/kubeadm-join.yml
-    owner: ansible
-    group: docker
-    mode: u=rwx,g=rwx,o=r
+- name: remove useless characters in the command
+  replace:
+    path: /tmp/kubeadmin-init.sh
+    regexp: '\\ '
+    replace: ' '
+    backup: yes
+
+- name: remove useless characters in the command
+  replace:
+    path: /tmp/kubeadmin-init.sh
+    regexp: '  kubeadm'
+    replace: 'kubeadm'
+    backup: yes
+
+- name: run Kubeadm join command
+  become: true
+  command: sh /tmp/kubeadmin-init.sh
+  register: result
+
+- debug: var=result.stdout

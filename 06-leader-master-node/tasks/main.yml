@@ -11,10 +11,10 @@
     mode: u=rwx,g=rwx,o=r
 
 - name: Intilizing Kubernetes Cluster
-  shell: kubeadm init --config /home/ansible/kubeadm-init.yml ;kubeadm init phase upload-certs --upload-certs
-  run_once: true
+  command: kubeadm init --config /home/ansible/kubeadm-init.yml --upload-certs
+#  run_once: true
   any_errors_fatal: true
-  delegate_to: "{{ k8s_master_ip }}"
+  register: kubeadm_init
 
 - pause: seconds=30
 
@@ -72,9 +72,16 @@
 - debug:
     msg: "{{ kubernetes_join_command.stdout_lines[0]  }}"
 
+- debug:
+#    msg: "{{ kubeadm_init.stdout_lines }}"
+    msg: "{{ kubeadm_init.stdout_lines[76] }} {{ kubeadm_init.stdout_lines[77] }} {{ kubeadm_init.stdout_lines[78] }}"
+
 - name: Create token and copy it on /tmp path for next role
   local_action: copy content="{{ kubernetes_join_command.stdout_lines[0] }}" dest="/tmp/join-command.sh" mode=0777
 
 - name: Create token and copy it on /tmp path for next role
   local_action: copy content="{{ cert_key.stdout_lines[0] }}" dest="/tmp/cert-key" mode=0777
+
+- name: Kubeadm full command for joining a master node
+  local_action: copy content="{{ kubeadm_init.stdout_lines[76] }} {{ kubeadm_init.stdout_lines[77] }} {{ kubeadm_init.stdout_lines[78] }}" dest="/tmp/kubeadmin-init" mode=0777
 

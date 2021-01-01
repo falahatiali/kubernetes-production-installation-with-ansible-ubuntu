@@ -27,8 +27,6 @@ apiServer:
 {% for master in masters %}
   - {{ masters[master] }}
 {% endfor %}
-  - verzav.ir
-  - api.verzav.ir
   - cluster.local
 controlPlaneEndpoint: "{{ ha }}:8443"
 certificatesDir: "/etc/kubernetes/pki"

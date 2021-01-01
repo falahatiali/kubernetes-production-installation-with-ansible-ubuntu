@@ -44,7 +44,8 @@ Edit following file and write your configs:
 **_ 06-leader-master-node/vars/main.yml _** -
 
 change k8s_master_ip for lead master machine
- 
+
+Edit ip addresses for master nodes and also HA proxy in file.
 ```
 1 - ansible-playbook -i inventory playbook1-create-non-root-user.yml
 2 - ansible-playbook -i inventory playbook2-generate-hosts-file.yml

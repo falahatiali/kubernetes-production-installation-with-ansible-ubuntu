@@ -1,12 +1,12 @@
 pod_network_cidr: "192.168.164.0/24"
-k8s_master_ip: "185.239.107.143"
+k8s_master_ip: "5.253.25.109"
 pod_network_manifest_file: "https://docs.projectcalico.org/v3.17/manifests/calico.yaml"
 rbac_manifest_file: ""
 ansible_user: "ansible"
 
-ha: 185.239.107.31
+ha: 45.82.137.112
 
 masters:
-  ss-master1: 185.239.107.143
-  ss-master2: 185.239.107.119
-  ss-master3: 185.239.107.145
+  ss-master1: 5.253.25.109
+  ss-master2: 5.253.25.25
+  ss-master3: 5.253.25.97

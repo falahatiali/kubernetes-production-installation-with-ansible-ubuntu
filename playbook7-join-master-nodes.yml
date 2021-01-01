@@ -2,8 +2,7 @@
   hosts: members
   gather_facts: true
   any_errors_fatal: true
-#  become: true
+  serial: 1
   remote_user: ansible
-#  become_method: sudo
   roles:
     - 07-join-master-nodes

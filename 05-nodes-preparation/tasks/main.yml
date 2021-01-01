@@ -17,11 +17,15 @@
     group: root
     mode: '0644'
 
-- name: Reload sysctl config for iptables
-  command: sysctl --system
+- name: Disable swapoff
+  shell: swapoff -a
 
-- name: Disable SWAP
-  command: swapoff -a
+- name: Disable swapoff permanently
+  replace:
+    path: /etc/fstab
+    regexp: '^(\s*)([^#\n]+\s+)(\w+\s+)swap(\s+.*)$'
+    replace: '#\1\2\3swap\4'
+    backup: yes
 
 - name: Reload sysctl config for iptables
   command: sysctl --system

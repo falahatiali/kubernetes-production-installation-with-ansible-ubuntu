@@ -12,7 +12,6 @@
 
 - name: Intilizing Kubernetes Cluster
   command: kubeadm init --config /home/ansible/kubeadm-init.yml --upload-certs
-#  run_once: true
   any_errors_fatal: true
   register: kubeadm_init
 
@@ -59,7 +58,6 @@
   command: "{{ item }}"
   with_items:
     - kubectl apply -f {{ pod_network_manifest_file }}
-#
 
 - name: get token
   shell: kubeadm token create --print-join-command

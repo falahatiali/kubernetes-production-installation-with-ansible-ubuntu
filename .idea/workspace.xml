@@ -20,17 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e338a505-76a2-49dd-a910-9fad1660aa4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/01-first-add-non-root-user/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-first-add-non-root-user/defaults/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-first-add-non-root-user/handlers/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-first-add-non-root-user/meta/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-first-add-non-root-user/vars/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-generate-hosts-file/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-generate-hosts-file/meta/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-install-haproxy/defaults/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-install-haproxy/handlers/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-install-haproxy/meta/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-install-haproxy/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/08-join-worker-nodes/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/08-join-worker-nodes/tasks/main.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +88,7 @@
       <workItem from="1609414297304" duration="109000" />
       <workItem from="1609414425361" duration="39000" />
       <workItem from="1609414483505" duration="10570000" />
-      <workItem from="1609488812507" duration="17041000" />
+      <workItem from="1609488812507" duration="18657000" />
     </task>
     <servers />
   </component>

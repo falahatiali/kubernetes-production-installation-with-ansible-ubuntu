@@ -8,15 +8,7 @@
     group: docker
     mode: "0777"
 
-- name: copy cert in servers
-  copy:
-    src: /tmp/cert-key
-    dest: /tmp/cert-key
-    owner: ansible
-    group: docker
-    mode: "0777"
-
-- name: Join the master nodes
+- name: Join the worker nodes
   become: yes
   remote_user: ansible
   command: sh -x /tmp/join.sh > /tmp/master-node-add-result

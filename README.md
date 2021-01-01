@@ -53,4 +53,7 @@ Edit ip addresses for master nodes and also HA proxy in file.
 4 - ansible-playbook -i inventory playbook4-install-docker.yml
 5 - ansible-playbook -i inventory playbook5-nodes-preparations.yml
 6 - ansible-playbook -i inventory playbook6-master-nodes.yml
+7 - ansible-playbook -i inventory playbook7-join-master-nodes.yml
+8 - ansible-playbook -i inventory playbook8-join-worker-nodes.yml
+
 ```

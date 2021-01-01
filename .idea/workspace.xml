@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e338a505-76a2-49dd-a910-9fad1660aa4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08-join-worker-nodes/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/08-join-worker-nodes/tasks/main.yml" afterDir="false" />
-    </list>
+    <list default="true" id="e338a505-76a2-49dd-a910-9fad1660aa4b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +84,7 @@
       <workItem from="1609414297304" duration="109000" />
       <workItem from="1609414425361" duration="39000" />
       <workItem from="1609414483505" duration="10570000" />
-      <workItem from="1609488812507" duration="18657000" />
+      <workItem from="1609488812507" duration="19354000" />
     </task>
     <servers />
   </component>

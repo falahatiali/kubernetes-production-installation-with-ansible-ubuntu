@@ -1,9 +1,13 @@
 # Kubernetes Production
 
-Install Kubernetes in a production environment with Ansible 
+Install Kubernetes in a production environment with Ansible on UBUNTU 
 
 
 ## Prerequisites 
+
+You can use these playbooks on any number of nodes you like. I have tested it on the number of nodes below
+(all of them are ubuntu 20.04 distro)
+
 ```
 3 Master Nodes
 3 Worker Nodes

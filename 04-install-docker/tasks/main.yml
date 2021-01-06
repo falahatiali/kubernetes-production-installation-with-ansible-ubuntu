@@ -70,9 +70,8 @@
     append: yes
 
 - name: create a new file for docker daemon
-  become: yes
   template:
-    src: dacker-daemon.j2
+    src: docker-daemon.j2
     dest: /etc/docker/daemon.json
     owner: root
     group: root

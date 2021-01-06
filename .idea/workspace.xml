@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e338a505-76a2-49dd-a910-9fad1660aa4b" name="Default Changelist" comment="" />
+    <list default="true" id="e338a505-76a2-49dd-a910-9fad1660aa4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/04-install-docker/templates/docker-daemon.j2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06-leader-master-node/templates/tuning-server.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-install-docker/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/04-install-docker/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +91,8 @@
       <workItem from="1609414297304" duration="109000" />
       <workItem from="1609414425361" duration="39000" />
       <workItem from="1609414483505" duration="10570000" />
-      <workItem from="1609488812507" duration="19354000" />
+      <workItem from="1609488812507" duration="20270000" />
+      <workItem from="1609946352713" duration="1209000" />
     </task>
     <servers />
   </component>
@@ -115,6 +123,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="249" y="78" width="556" height="378" key="#Custom_Plugin_Repositories/72.27.1294.741@72.27.1294.741" timestamp="1609414317279" />
+    <state x="387" y="199" width="653" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609946416712">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="387" y="199" width="653" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1294.741@72.27.1294.741" timestamp="1609946416712" />
     <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1609414769243">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
@@ -123,5 +135,9 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1609414464463" />
+    <state x="333" y="78" width="762" height="646" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609947299117">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="333" y="78" width="762" height="646" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1294.741@72.27.1294.741" timestamp="1609947299117" />
   </component>
 </project>

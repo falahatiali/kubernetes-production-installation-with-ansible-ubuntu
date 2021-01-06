@@ -1,0 +1,9 @@
+# Increase size of file handles and inode cache
+fs.file-max = 1500000
+fs.nr_open = 1500000
+vm.max_map_count = 262144
+net.ipv4.ip_local_reserved_ports=30000-32767
+# Allowed local port range
+net.ipv4.ip_local_port_range = 1024 65535
+net.netfilter.nf_conntrack_max=32768000
+vm.swappiness=0

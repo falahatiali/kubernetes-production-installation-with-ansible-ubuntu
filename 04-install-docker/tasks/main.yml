@@ -69,6 +69,18 @@
     shell: /bin/bash
     append: yes
 
+- name: create a new file for docker daemon
+  become: yes
+  template:
+    src: dacker-daemon.j2
+    dest: /etc/docker/daemon.json
+    owner: root
+    group: root
+
+- name: systemctl daemon reload
+  become: yes
+  shell: systemctl daemon-reload
+
 - name: Reboot host and wait for it to restart
   reboot:
     msg: "Reboot initiated by Ansible"

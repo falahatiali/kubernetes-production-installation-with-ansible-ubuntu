@@ -10,6 +10,17 @@
     group: docker
     mode: u=rwx,g=rwx,o=r
 
+- name: one server with lots of connections ( tuning Linux )
+  template:
+    src: tuning-server.j2
+    dest: /etc/sysctl.d/99-kubernetes.conf
+    owner: root
+    group: root
+    mode: u=rwx,g=r,o=r
+
+- name: reload system settings
+  shell: sysctl --system
+
 - name: Intilizing Kubernetes Cluster
   command: kubeadm init --config /home/ansible/kubeadm-init.yml --upload-certs
   any_errors_fatal: true

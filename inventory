@@ -1,26 +1,26 @@
 [all]
-ss-worker2
-ss-worker1
-ss-master3
-ss-master2
-ss-master1
-ss-ha
+cka-ha
+cka-m1
+cka-m2
+cka-m3
+cka-w1
+cka-w2
 
 [leader]
-ss-master1
+cka-m1
 
 [members]
-ss-master2
-ss-master3
+cka-m2
+cka-m3
 
 [masters]
-ss-master3
-ss-master2
-ss-master1
+cka-m1
+cka-m2
+cka-m3
 
 [workers]
-ss-worker2
-ss-worker1
+cka-w1
+cka-w2
 
 [ha]
-ss-ha
+cka-ha

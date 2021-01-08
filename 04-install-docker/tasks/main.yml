@@ -1,5 +1,14 @@
 ---
 # tasks file for 04-install-docker
+- name: remove
+  apt:
+    name: "{{ p }}"
+    state: absent
+  vars:
+    p:
+      - docker-ce
+      - docker-ce-cli
+
 - name: Update and upgrade apt packages for the first time before installing packages
   become: true
   apt:
@@ -40,7 +49,6 @@
   apt:
     name: "{{ packages_docker }}"
     state: present
-    update_cache: yes
   vars:
     packages_docker:
       - docker-ce=5:19.03.14~3-0~ubuntu-focal
@@ -69,6 +77,9 @@
     shell: /bin/bash
     append: yes
 
+- name: Hold docker engine upgrade
+  command: apt-mark hold docker docker-ce docker-ce-cli
+
 - name: create a new file for docker daemon
   template:
     src: docker-daemon.j2
@@ -79,6 +90,11 @@
 - name: systemctl daemon reload
   become: yes
   shell: systemctl daemon-reload
+
+- name: Restart Docker Service
+  service:
+    name: docker
+    state: restarted
 
 - name: Reboot host and wait for it to restart
   reboot:

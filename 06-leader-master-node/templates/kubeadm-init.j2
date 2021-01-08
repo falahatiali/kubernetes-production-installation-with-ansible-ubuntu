@@ -37,11 +37,11 @@ clusterName: "cluster.local"
 apiVersion: kubeadm.k8s.io/v1beta2
 kind: InitConfiguration
 localAPIEndpoint:
-  advertiseAddress: {{ masters['ss-master1']}}
+  advertiseAddress: {{ masters['cka-m1']}}
   bindPort: 6443
 nodeRegistration:
   kubeletExtraArgs:
-    node-ip: {{ masters['ss-master1'] }}
+    node-ip: {{ masters['cka-m1'] }}
 ---
 apiVersion: kubeproxy.config.k8s.io/v1alpha1
 kind: KubeProxyConfiguration

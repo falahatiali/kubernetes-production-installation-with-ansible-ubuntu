@@ -21,11 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e338a505-76a2-49dd-a910-9fad1660aa4b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-install-haproxy/templates/haproxy.j2" beforeDir="false" afterPath="$PROJECT_DIR$/03-install-haproxy/templates/haproxy.j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-install-docker/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/04-install-docker/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-leader-master-node/templates/kubeadm-init.j2" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/templates/kubeadm-init.j2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/06-leader-master-node/vars/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory" beforeDir="false" afterPath="$PROJECT_DIR$/inventory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playbook7-join-master-nodes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/playbook7-join-master-nodes.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +91,7 @@
       <workItem from="1609488812507" duration="20270000" />
       <workItem from="1609946352713" duration="6473000" />
       <workItem from="1610002160512" duration="4929000" />
-      <workItem from="1610127277040" duration="2564000" />
+      <workItem from="1610127277040" duration="3386000" />
     </task>
     <servers />
   </component>

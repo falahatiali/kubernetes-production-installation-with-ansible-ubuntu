@@ -1,12 +1,12 @@
 pod_network_cidr: "192.168.164.0/24"
-k8s_master_ip: "185.239.105.168"
+k8s_master_ip: "5.253.24.161"
 pod_network_manifest_file: "https://docs.projectcalico.org/v3.17/manifests/calico.yaml"
 rbac_manifest_file: ""
 ansible_user: "ansible"
 
-ha: 185.239.105.41
+ha: 45.82.137.227
 
 masters:
-  cka-m1: 185.239.105.168
-  cka-m2: 185.239.105.114
-  cka-m3: 185.239.105.30
+  cka-m1: 5.253.24.161
+  cka-m2: 5.253.25.250
+  cka-m3: 185.239.105.128
